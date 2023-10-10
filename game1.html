@@ -3,41 +3,68 @@
 <head>
 <body background="2.jpg">
 
-<h1> <center>  Rugs to Riche$ </h1></center></center>
+<h1> <center>  Rugs to Riche$ </center></h1>
 
-<h2><a href="home.html">Home</a></h2><center><h1 style="background-color:MediumSeaGreen;">PICK YOUR POISON</h1>
+<h2><a href="home.html">Home</a></h2><center><h1 id="PICK YOUR POISON">PICK YOUR POISON</h1>
 </center>
 
 <center><h2>JACK POT!! $50,000.00</h2></center>
 
 
 <right>
-<html lang="en">
-<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=0.9">
     <title>Loot Boxes</title>
-    <style>
-        /* Add some basic styles for the loot boxes */
-        .loot-box {
-            width: 150px;
-            height: 150px;
-            border: 2px solid #333;
-            text-align: center;
-            padding: 10px;
-            display: inline-block;
-            margin: 10px;
-            cursor: pointer;
-        }
-    </style>
-</head>
+    <div id="box1" onclick="openLootBox(this)"></div>
+    <div id="box2" onclick="openLootBox(this)"></div>
+    <div id="box3" onclick="openLootBox(this)"></div>
+    <div id="box4" onclick="openLootBox(this)"></div>
+
+
+</body>
+</right>
 <body>
-    <div class="loot-box" onclick="openLootBox(this)"></div>
-    <div class="loot-box" onclick="openLootBox(this)"></div>
-    <div class="loot-box" onclick="openLootBox(this)"></div>
-    <div class="loot-box" onclick="openLootBox(this)"></div>
+<div><body>
+
+
+
+<form action="/action_page.php" method="get">
+  <label for="browser">Insert coin:</label>
+  <input list="browsers" name="browser" id="browser">
+  
+  <input type="submit">
+</form>
+
+<div><img src="paymentimage.jpg" id="paymentimage" 
+ alt="Payment option" width="300" height="100">
+</div>
+
+<div><center><p1> MUST BE 19 Y/O AND ABOVE</center></div></p1>
+
+<div>
+<center><body><p4>
+&copy;COPY RIGHT, VHYCK<br>
+</div>
+
+</p4></body></center>
 
     <script>
+document.getElementById("PICK YOUR POISON").style.backgroundColor = "MediumSeaGreen";
+setupBox(document.getElementById("box1"));
+setupBox(document.getElementById("box2"));
+setupBox(document.getElementById("box3"));
+setupBox(document.getElementById("box4"));
+document.getElementById("paymentimage").style.cssFloat = "bottom";
+        function setupBox(box) {
+            box.style.width = "150px";
+            box.style.height = "150px";
+            box.style.border = "2px solid #333";
+            box.style.textAlign = "center";
+            box.style.padding = "10px";
+            box.style.display = "inline-block";
+            box.style.margin =  "10px";
+            box.style.cursor = "pointer";
+        }
         //  for handling the loot box opening
         function openLootBox(box) {
             // Define possible loot items
@@ -58,37 +85,6 @@
             box.removeEventListener('click', openLootBox); // Disable further clicks
         }
     </script>
-</body>
-</right>
-<body>
-<div><body>
-
-
-
-<form action="/action_page.php" method="get">
-  <label for="browser">Insert coin:</label>
-  <input list="browsers" name="browser" id="browser">
-  
-  <input type="submit">
-</form>
-
-
-</body></div>
-
-<div><img src="paymentimage.jpg" style = "float: bottom" 
- alt="Payment option" width="300" height="100">
-</div>
-
-<div><center><p1> MUST BE 19 Y/O AND ABOVE</center></div></p1>
-
-<div>
-<center><body><p4>
-&copy;COPY RIGHT, VHYCK<br>
-</div>
-
-</p4></body></center>
-
-
 
 </body>
 </html> 
