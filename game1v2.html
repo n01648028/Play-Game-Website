@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  background-image: url("bitcoin.jpg");
+  background-repeat: 4-repeat;
+  background-position: right top;
+  margin-right: 200px;
+}
+
+.loot-box {
+    width: 150px;
+    height: 150px;
+    border: 2px solid gold; 
+    text-align: center;
+    padding: 10px;
+    display: inline-block;
+    margin: 20px;
+    cursor: pointer;
+    background-color: LightSkyBlue;
+    font-size: 40px;
+    color: yellow;
+    border: 2px solid black; 
+    padding: 10px; 
+    border-radius: 50px 20px; 
+}
+.margin-line {
+    margin-bottom: 20px;
+    width: 100%;
+    border-bottom: 2px solid LightSkyBlue;
+}
+.insert-coin {
+    float: left;
+    color: white; 
+}
+
+.submit-button {
+    float: left;
+}
+
+.payment-image {
+    float: left;
+    clear: left; 
+    color: white; 
+}
+.must-be-above {
+    color: white; 
+}
+
+.copy-right {
+    color: white; 
+}
+</style>
+</head>
+
+<body>
+
+<center><h1><span style="color:MediumSeaGreen;">Rugs to Riche$</span></h1></center>
+
+<center><h1 style="background-color:MediumSeaGreen;">PICK YOUR POISON</h1>
+</center>
+
+<center><h2 style="color:gold;">JACK POT!! $50,000.00</h2></center>
+
+<div class="margin-line"></div>
+
+<right>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.9">
+    <title>Loot Boxes</title>
+</head>
+<body>
+    <div class="loot-box" onclick="openLootBox(this)">$<sup>1<sup>.00</sup></sup></div>
+    <div class="loot-box" onclick="openLootBox(this)">$<sup>2<sup>.00</sup></sup></div>
+    <div class="loot-box" onclick="openLootBox(this)">$<sup>3<sup>.00</sup></sup></div>
+    <div class="loot-box" onclick="openLootBox(this)">$<sup>4<sup>.00</sup></sup></div>
+
+    <script>
+        function openLootBox(box) {
+            const lootItems = [
+                '"rehab is for losers"',
+                '"another bites the dust"',
+                '"please stop gambling"',
+                '"play again"',
+                '"prizeless"'
+            ];
+
+            const randomIndex = Math.floor(Math.random() * lootItems.length);
+            const selectedItem = lootItems[randomIndex];
+
+            // Reduce the font size when the loot box is opened
+            box.style.fontSize = '20px';
+
+            box.innerHTML = `<p>CONGRATULATION YOUR PRIZE IS: <strong>${selectedItem}</strong></p>`;
+            box.removeEventListener('click', openLootBox);
+        }
+    </script>
+</body>
+</right>
+
+<form action="/action_page.php" method="get">
+  <label for="browser" class="insert-coin">Insert coin:</label>
+  <input list="browsers" name="browser" id="browser" class="submit-button">
+  <input type="submit" class="submit-button">
+</form>
+
+<div><img src="paymentimage.jpg" alt="Payment option" width="300" height="100" class="payment-image"></div>
+<div><center><p1 class="must-be-above">MUST BE 19 Y/O AND ABOVE</p1></center></div>
+
+<center><p4 class="copy-right">&copy;COPY RIGHT, VHYCK<br></p4></center>
+
+</body>
+</html>
