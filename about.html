@@ -1,20 +1,24 @@
 <!DOCTYPE html>
+    <head>
+        <link rel ="stylesheet" href="main.css">
+        <style>
+        div{
+            display: inline-block;
+        }
+        </style>
+    </head>
     <body>
-        <center><table>
-            <tr>
-            <td><font color="blue"><h1>Rocket Games</h1></font><br><center><h2>About</h2></center><br/></td>
-            <td><img src="rocket2.jpg"><img/></td>
-            </tr>
-        </table></center>
-        <table>
-            <tr>
-            <td>Search for other games</td>
-            <td><form action="https://www.google.com/search" target="_blank"><input type="text" id="q" name="q"/><input type="submit" value="Go"/></form></td>
-            </tr>
-            <tr>
-            <td><a href="home.html">Home</a>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <br>
+        <center>
+            <div>
+                <font color="blue"><h1>Rocket Games</h1></font>
+                <br><center><h2>About</h2></center><br/>
+            </div>
+            <div>
+                <td><img src="rocket2.jpg"><img/></td>
+            </div>
+        </center>
+        <div id="menu">
+            <a href="home.html">Home</a><br>
             <a href="about.html">About</a><br/>
             <a href="Info Page.html">Contact</a><br>
             <a href="feedback.html">Feedback</a><br/>
@@ -24,9 +28,19 @@
             <a href="https://www.crazygames.com/game/racing-in-city">Driving Road</a><br/>
             <a href="game1.html">Rugs to Riche$</a><br>
             <a href="Coming Soon Page.html">More Games Coming Soon</a><br/>
-            </td>
-            <td><img src="team.jpg"><img/>&nbsp;&nbsp;</td>
-            <td>Do you like to play?<br>
+        </div>
+        <div>
+            <form style="display: inline-block;" action="https://www.google.com/search" target="_blank">
+            <label for="q">Search for others&nbsp;</label>
+            <input type="text" id="q" name="q"/>
+            <input type="submit" value="Go"/>
+            </form><br><br/>
+            <img src="team.jpg"><img/>
+            <center>
+            <h2>Play for knowledge</h2></center>
+        </div>
+        <div>
+            Do you like to play?<br>
             Join to us! This a fun entertainment website where you can choose the games you like.<br/>
             Our Rocket team is four outstanding computer's programmers who enjoy coding and creating new things.<br>
             Play now by selecting any online games.<br/>
@@ -34,18 +48,13 @@
             We are developing this website, and we can create your game too.<br/>
             Our goal to help you learn and enjoy by developing the best online browser game.<br>
             You can submit and play Your Game here!<br/>
-            </td>
-            </tr>
-            <tr>
-            <td></td>
-            <td>
-            <center><h2>
-            Play for knowledge</h2></center></td>
-            <td><center><form action="submit your game.html"><input type="submit" value="Submit Your Game"/></form></center></td>
-            <td></td>
-            <td><center><h2>Play for fun</h2></center></td>
-            </tr>
-        </table>
+            <br>
+            <br/>
+            <center><form action="submit your game.html"><input type="submit" value="Submit Your Game"/></form></center>
+        </div>
+        <div>
+            <center><h2>Play for fun</h2></center>
+        </div>
         <center><a href="Coming Soon Page.html"><img src="more games comming soon.jpg"><img/></a></center>
     </body>
 </html>
