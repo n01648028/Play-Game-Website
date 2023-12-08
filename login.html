@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+    <head>
+        <link rel ="stylesheet" href="main.css">
+        <style>
+        div{
+            display: inline-block;
+        }
+        </style>
+        <script type="text/javascript">
+            function Login(){
+                loginLabel = document.getElementById("LoginLabel");
+                if(loginLabel.innerHTML == "Create New Accout"){
+                    emailAddress = document.getElementById("Email address");
+                    password = document.getElementById("Password");
+                    localStorage.setItem("email = " + emailAddress.value, password.value);
+                }
+                else if(loginLabel.innerHTML == "Reset Password"){
+                    emailAddress = document.getElementById("Email address");
+                    password = document.getElementById("Password");
+                    passwordGot = localStorage.getItem("email = " + emailAddress.value);
+                    localStorage.setItem("email = " + emailAddress.value, password.value);
+                }
+                else{
+                    emailAddress = document.getElementById("Email address");
+                    password = document.getElementById("Password");
+                    passwordGot = localStorage.getItem("email = " + emailAddress.value);
+                    if(passwordGot != password.value){
+                        alert("Incorect password or Email address");
+                    }
+                    else{
+                        sessionStorage.setItem("email", emailAddress.value);
+                        window.location.href = "home.html";
+                    }
+                }
+            }
+            function ForgotPassword(){
+                loginLabel = document.getElementById("LoginLabel");
+                forgotPassword = document.getElementById("Forgot password");
+                joinNow = document.getElementById("Join now");
+                submitButton = document.getElementById("Submit button");
+                emailAddress = document.getElementById("Email address");
+                passwordGot = localStorage.getItem("email = " + emailAddress.value);
+                if(passwordGot == null){
+                    alert("Email address does not exist");
+                }
+                else{
+                    loginLabel.innerHTML = "Reset Password";
+                    forgotPassword.style.display = "none";
+                    joinNow.style.display = "none";
+                    submitButton.value = "update";
+                }
+            }
+            function JoinNow(){
+                loginLabel = document.getElementById("LoginLabel");
+                forgotPassword = document.getElementById("Forgot password");
+                joinNow = document.getElementById("Join now");
+                submitButton = document.getElementById("Submit button");
+                loginLabel.innerHTML = "Create New Accout";
+                forgotPassword.style.display = "none";
+                joinNow.style.display = "none";
+                submitButton.value = "create";
+            }
+        </script>
+    </head>
+    <body>
+        <font color="blue"><h1><center>Rocket Games</center></h1></font>
+        <div id="menu">
+            <a href="home.html">Home</a><br>
+            <a href="about.html">About</a><br/>
+            <a href="Info Page.html">Contact</a><br>
+            <a href="feedback.html">Feedback</a><br/>
+            <a href="donate.html">Donate</a><br/>
+            <a href="login.html">Login</a><br/>
+            <a href="https://www.chess.com/play/online">Chess</a><br>
+            <a href="https://www.jigsawplanet.com/?rc=play&pid=2c0c7e78a895">Puzzles</a><br/>
+            <a href="https://www.google.com/logos/2010/pacman10-i.html">Pacman</a><br>
+            <a href="https://www.crazygames.com/game/racing-in-city">Driving Road</a><br/>
+            <a href="game1.html">Rugs to Riche$</a><br>
+            <a href="Coming Soon Page.html">More Games Coming Soon</a><br/>
+        </div>
+        <center><div>
+        <form onsubmit="Login();">
+            <h2 id="LoginLabel">&nbsp;Login</h2>
+            <table>
+            <tr>
+            <td><label for="Email address">&nbsp;Email address: </label></td>
+            <td><input type="email" id="Email address" name="Email address"/></td>
+            </tr>
+            <tr>
+            <td><label for="Password">&nbsp;Password: </label></td>
+            <td><input type="text" id="Password" name="Password"/></td>
+            </tr>
+            <tr>
+            <td><input type="button" onclick="ForgotPassword();" id="Forgot password" value="Forgot password?" name="Forgot password"/></td>
+            </tr>
+            <tr>
+            <td><input type="button" onclick="JoinNow();" id="Join now" value="Join now?" name="Join now"/></td>
+            </tr>
+            <tr>
+            <th><input type="submit" id="Submit button" value="login" />&nbsp;</th>
+            <th><input type="reset" value="clear" /></th>
+            </tr>
+            </table>
+        </div></center>
+    </body>
+</html>
