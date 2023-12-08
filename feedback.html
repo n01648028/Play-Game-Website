@@ -1,69 +1,70 @@
 <!DOCTYPE html>
-    <body>
-        <table>
-            <tr>
-            <td><a href="home.html">Home</a>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <br>
-            <a href="about.html">About</a><br/>
-            <a href="Info Page.html">Contact</a><br>
-            <a href="feedback.html">Feedback</a><br/>
-            <a href="donate.html">Donate</a><br/>
-            <a href="https://www.chess.com/play/online">Chess</a><br>
-            <a href="https://www.jigsawplanet.com/?rc=play&pid=2c0c7e78a895">Puzzles</a><br/>
-            <a href="https://www.google.com/logos/2010/pacman10-i.html">Pacman</a><br>
-            <a href="https://www.crazygames.com/game/racing-in-city">Driving Road</a><br/>
-            <a href="game1.html">Rugs to Riche$</a><br>
-            <a href="Coming Soon Page.html">More Games Coming Soon</a><br/>
-            </td>
-            </tr>
-        </table>
-        <font color=blue><center><table border = "5"><tr><td><h1>&nbsp;Share your feedback&nbsp;</h1>
-        <form>
-            <font color=black><h2>&nbsp;Contact information</h2></font>
-            <table>
-            <tr>
-            <td><label for="Email address">&nbsp;Email address: </label></td>
-            <td><input type="email" id="Email address" name="Email address"/></td>
-            </tr>
-            <tr>
-            <td><label for="First name">&nbsp;First name: </label></td>
-            <td><input type="text" id="First name" name="First name"/></td>
-            </tr>
-            <tr>
-            <td><label for="Last name">&nbsp;Last name: </label></td>
-            <td><input type="text" id="Last name" name="Last name"/></td>
-            </tr>
-            </table>
-            <font color=black><h2>&nbsp;Choose your favourite game</h2></font>
-            <table>
-            <tr>
-            <td><label for="Pacman">&nbsp;Pacman</label></td>
-            <td><input type="checkbox" id="Pacman" name="Pacman"/></td>
-            </tr>
-            <tr>
-            <td><label for="Chess">&nbsp;Chess</label></td>
-            <td><input type="checkbox" id="Chess" name="Chess"/></td>
-            </tr>
-            <tr>
-            <td><label for="Driving Road">&nbsp;Driving Road</label></td>
-            <td><input type="checkbox" id="Driving Road" name="Driving Road"/></td>
-            </tr>
-            <tr>
-            <td><label for="Puzzle">&nbsp;Puzzle</label></td>
-            <td><input type="checkbox" id="Puzzle" name="Puzzle"/></td>
-            </tr>
-            <tr>
-            <td><label for="Other">&nbsp;Other</label></td>
-            <td><input type="checkbox" id="Other" name="Other"/></td>
-            </tr>
-            </table>
-            <center><table>
-            <tr>
-            <th><input type="submit" value="Submit" />&nbsp;</th>
-            <th><input type="reset" value="Reset" /></th>
-            </tr>
-            </table></center>
-        </form></td></tr></table></center></font>
-    </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback Form</title>
+  <style>
+    .feedback-form {
+      max-width: 400px;
+      margin: 20px auto;
+      padding: 15px;
+      border: 1px solid #ccc;
+      border-radius: 21px;
+    }
+
+    .error {
+      border: 7px solid red;
+    }
+  </style>
+</head>
+<body>
+  <div class="feedback-form">
+    <h2>Feedback</h2>
+    <form id="feedbackForm">
+      <label for="email">Email:</label>
+      <br><input type="text" id="email" name="email" required>
+      <br>
+
+      <label for="phone">Phone Number:</label>
+      <br><input type="text" id="phone" name="phone" required>
+      <br>
+
+      <label for="firstName">First Name:</label>
+      <br><input type="text" id="firstName" name="firstName" required>
+      <br>
+
+      <label for="lastName">Last Name:</label>
+      <br><input type="text" id="lastName" name="lastName" required>
+      <br>
+
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+
+  <script>
+    document.getElementById("feedbackForm").addEventListener("submit", function(event) {
+      var emailInput = document.getElementById("email");
+      var phoneInput = document.getElementById("phone");
+
+      
+      var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(emailInput.value)) {
+        emailInput.classList.add("error");
+        event.preventDefault();
+      } else {
+        emailInput.classList.remove("error");
+      }
+
+      
+      var phoneRegex = /^\d+$/;
+      if (!phoneRegex.test(phoneInput.value)) {
+        phoneInput.classList.add("error");
+        event.preventDefault();
+      } else {
+        phoneInput.classList.remove("error");
+      }
+    });
+  </script>
+</body>
 </html>
