@@ -30,7 +30,8 @@ text-align:center;
 <script>
 function checkform() {
   let x = document.forms["cardinfo"]["cardnum"].value;
-  if (x == NaN|| x.length != 16) {
+  let y = num.toString(x); 
+  if (x == NaN|| y.length != 16) {
     alert("Card number must be filled out");
     return false;
     }
