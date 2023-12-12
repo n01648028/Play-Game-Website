@@ -1,13 +1,3 @@
-h1 {
-text-align:center; }
- 
-
-p.one { color: blue;
-    word-spacing: 580px;}
-
-div {
-  text-align:center;}
-
-body{ background: lightgreen;}
-
-span {padding-left: 220px;}
+#menu{
+float:left;
+}
